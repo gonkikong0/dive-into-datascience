@@ -12,5 +12,11 @@ hour = pd.read_csv('hour.csv')
 
 # print(hour.loc[2:4,'count']) #Loc() Used to specify a subset [<row>,<column>]
 
-print(hour.loc[hour['hr'] < 5, 'registered'].mean())
-print(hour.loc[hour['hr'] < 5, 'casual'].mean())
+
+
+# print(hour.loc[hour['hr'] < 5, 'registered'].mean())
+# print(hour.loc[hour['hr'] < 5, 'casual'].mean())
+
+print(hour.loc[(hour['hr']< 5) & (hour['temp'] < .50), 'count'].mean())
+print(hour.loc[(hour['hr']< 5) & (hour['temp'] > .50), 'count'].mean())
+      
