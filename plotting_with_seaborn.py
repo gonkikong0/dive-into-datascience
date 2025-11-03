@@ -11,3 +11,6 @@ plt.xlabel("Hour")
 plt.ylabel("Count")
 plt.title("Counts by Hour")
 plt.show()
+
+
+#Barplot
